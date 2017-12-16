@@ -30,7 +30,10 @@ if (typeof apps == 'string') {
  */
 const CONFIG = {
     entry: {},
-    devtool: 'source-map'
+    devtool: 'source-map',
+    devServer: {
+        contentBase: './dist'
+    }
 }
 
 /**

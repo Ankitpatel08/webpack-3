@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack --config webpack.config.js --watch --progress --colors $APPS"
+    "start": "webpack --config webpack.config.js --watch --progress --colors $APPS",
+    "start:dev": "webpack-dev-server --config webpack.config.js --open $APPS"
   },
   "repository": {
     "type": "git",
@@ -18,7 +19,8 @@
   },
   "homepage": "https://github.com/ankitpansuriya/webpack-3#readme",
   "devDependencies": {
-    "webpack": "^3.10.0"
+    "webpack": "^3.10.0",
+    "webpack-dev-server": "^2.9.7"
   },
   "dependencies": {
     "copy-webpack-plugin": "^4.3.0",
