@@ -1,7 +1,4 @@
-/**
- * [path description]
- * @type {[type]}
- */
+
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -111,7 +108,7 @@ CONFIG.plugins = [
     },
     extractSass,
     function() {
-        // generate build-hash.txt containing the hash of this build
+        // copy css file into css/main.css
         this.plugin('done', function(statsData) {
             for (var i in apps) {
                 console.log('APP: ', apps[i]);
