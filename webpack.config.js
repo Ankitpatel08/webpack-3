@@ -3,6 +3,7 @@
  * @type {[type]}
  */
 const path = require('path');
+const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyWebpackPlugin = require('copy-webpack-plugin');
 const extractSass = new ExtractTextPlugin('[name].css');
@@ -132,6 +133,11 @@ CONFIG.plugins = [
         })
     }
 ]
+
+/**
+ * @property {object} CONFIG.plugins
+ */
+CONFIG.plugins.push(new webpack.optimize.ModuleConcatenationPlugin());
 
 /**
  * @property {object}  CONFIG.plugins
